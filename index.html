@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/910ce80589.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>animated webdesign</title>
+</head>
+<body>
+   <div class="container">
+    <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="social-icon">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+    </div>
+    <div class="swiper">
+     <div class="swiper-wrapper">
+      <div class="swiper-slide slide-01">
+          <div class="slide-info">
+             <div class="slide-img">
+                 <div class="logo">
+                     <img src="img/whitehorse_logo.webp">
+                 </div>
+                 <div class="laptop">
+                     <img src="img/macbookpro.webp">
+                 </div>
+                 <div class="wallpaper">
+                    <img src="img/screen1_content.webp">
+                </div>
+             </div>
+             <div class="slide-detils">
+                 <h1><span>our design</span> colorfull<br> like nature</h1>
+                 <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Corporis nemo esse unde temporibus recusandae doloribus 
+                    nisi dignissimos.
+                 </p>
+                 <a href="">contact us here</a>
+             </div>
+          </div>
+      </div>
+
+      <div class="swiper-slide slide-02">
+        <div class="slide-info">
+           <div class="slide-img">
+               <div class="logo">
+                   <img src="img/whitehorse_logo.webp">
+               </div>
+               <div class="laptop">
+                   <img src="img/light1.webp">
+               </div>
+           </div>
+           <div class="slide-detils">
+               <h1><span>speaking</span><br>brillant<br> ideais</h1>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Corporis nemo esse unde temporibus recusandae doloribus 
+                  nisi dignissimos.
+               </p>
+               <a href="">contact us here</a>
+           </div>
+        </div>
+    </div>
+
+    <div class="swiper-slide slide-03">
+        <div class="slide-info">
+           <div class="slide-img">
+               <div class="logo">
+                   <img src="img/whitehorse_logo.webp">
+               </div>
+               <div class="laptop">
+                   <img src="img/ipad.webp">
+               </div>
+               <div class="wallpaper">
+                  <img src="img/owl1.jpg">
+              </div>
+              <div class="laptop2">
+                <img src="img/ihpone.webp">
+            </div>
+            <div class="wallpaper2">
+               <img src="img/owl2.jpg">
+           </div>
+           </div>
+           <div class="slide-detils">
+               <h1><span>responsive</span> <br>for mobilephone<br> perefction</h1>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Corporis nemo esse unde temporibus recusandae doloribus 
+                  nisi dignissimos.
+               </p>
+               <a href="">contact us here</a>
+           </div>
+        </div>
+    </div>
+
+
+     </div>
+     <div class="slide-arrows">
+       <div class="swiper-button-prev arrow"><i class="fa-solid fa-arrow-right"></i></div>
+       <div class="swiper-button-next arrow"><i class="fa-solid fa-arrow-left"></i></div>
+    </div>
+  </div>
+   </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+         direction: 'vertical',
+         loop: true,
+         speed:800,
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+ });
+    
+  let animation = anime({
+    targets:'.slide-01 .laptop img',
+    scale:[0,1],
+    opacity:[0,1],
+    duration:800,
+    easing:'easeInOutSine',
+  });
+
+  anime({
+    targets:'.slide-01 .wallpaper img',
+    scale:[1.2,1],
+    opacity:[0,1],
+    duration:1000,
+    easing:'easeInOutSine',
+    delay:300,
+  });
+
+  anime({
+    targets:'.slide-detils',
+    height:[0,300],
+    opacity:[0,1],
+    duration:400,
+    easing:'easeInOutSine',
+    delay:500,
+  });
+
+  anime({
+    targets:'.slide-detils h1',
+    translateY:[-20,0],
+    opacity:[0,1],
+    duration:400,
+    easing:'easeInOutSine',
+    delay:500,
+  });
+
+  anime({
+    targets:'.slide-detils p',
+    translateY:[-20,0],
+    opacity:[0,1],
+    duration:800,
+    easing:'easeInOutSine',
+    delay:700,
+  });
+
+  anime({
+    targets:'.slide-detils a',
+    translateY:[-20,0],
+    opacity:[0,1],
+    duration:800,
+    easing:'easeInOutSine',
+    delay:700,
+  });
+
+  anime({
+    targets:'.swiper-button-prev',
+    translateX:[20,0],
+    opacity:[0,1],
+    duration:800,
+    easing:'easeInOutSine',
+    delay:700,
+  });
+
+  anime({
+    targets:'.swiper-button-next',
+    translateX:[-20,0],
+    opacity:[0,1],
+    duration:800,
+    easing:'easeInOutSine',
+    delay:700,
+  });
+
+  swiper.on('slideChangeTransitionStart',function(){
+                let animation = anime({
+                targets: '.slide-01 .laptop img',
+                scale:[0,1],
+                opacity:[0,1],
+                duration:800,
+                easing: 'easeInOutSine',
+            });
+           
+            anime({
+                targets: '.slide-01 .wallpaper img',
+                scale:[1.2,1],
+                opacity:[0,1],
+                duration:1000,
+                easing: 'easeInOutSine',
+                delay:300,
+            });
+
+            anime({
+                targets: '.slide-detils',
+                height:[0,300],
+                opacity:[0,1],
+                duration:400,
+                easing: 'easeInOutSine',
+                delay:500,
+            });
+
+            anime({
+                targets: '.slide-detils h1',
+                translateY:[-20,0],
+                opacity:[0,1],
+                duration:800,
+                easing: 'easeInOutSine',
+                delay:600,
+            });
+            anime({
+                targets: '.slide-detils p',
+                translateY:[-20,0],
+                opacity:[0,1],
+                duration:800,
+                easing: 'easeInOutSine',
+                delay:700,
+            });
+            anime({
+                targets: '.slide-detils a',
+                translateY:[-20,0],
+                opacity:[0,1],
+                duration:800,
+                easing: 'easeInOutSine',
+                delay:700,
+            });
+            anime({
+                targets: '.swiper-button-prev',
+                translateX:[20,0],
+                opacity:[0,1],
+                duration:600,
+                easing: 'easeInOutSine',
+                delay:700,
+            });
+            anime({
+                targets: '.swiper-button-next',
+                translateX:[-20,0],
+                opacity:[0,1],
+                duration:600,
+                easing: 'easeInOutSine',
+                delay:700,
+            });
+
+            anime({
+                targets: '.slide-03 .laptop img',
+                translateX:[30,0],
+                opacity:[0,1],
+                duration:600,
+                easing: 'easeInOutSine',
+                delay:700,
+            });
+
+            anime({
+                targets: '.slide-03 .wallpaper',
+                scale:[1.2,1],
+                opacity:[0,1],
+                duration:600,
+                easing: 'easeInOutSine',
+                delay:750,
+            });
+
+            anime({
+                targets: '.slide-03 .laptop2 img',
+                translateX:[-30,0],
+                opacity:[0,1],
+                duration:600,
+                easing: 'easeInOutSine',
+                delay:700,
+            });
+
+            anime({
+                targets: '.slide-03 .wallpaper2 img',
+                scale:[1.2,1],
+                opacity:[0,1],
+                duration:600,
+                easing: 'easeInOutSine',
+                delay:750,
+            });
+
+            });
+
+    </script>
+    
+</body>
+</html>
